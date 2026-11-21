@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hassan | Cloud Computing</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #0f172a;
+            overflow-x: hidden;
+        }
+
+        /* Animated Background */
+
+        .home {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, #0f172a, #172554, #312e81);
+            padding: 30px;
+        }
+
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(2px);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .circle1 {
+            width: 250px;
+            height: 250px;
+            background: rgba(56, 189, 248, 0.15);
+            top: 10%;
+            left: 10%;
+        }
+
+        .circle2 {
+            width: 300px;
+            height: 300px;
+            background: rgba(139, 92, 246, 0.15);
+            bottom: 5%;
+            right: 10%;
+            animation-delay: 2s;
+        }
+
+        @keyframes float {
+
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-30px);
+            }
+
+        }
+
+        /* Main Card */
+
+        .container {
+            position: relative;
+            z-index: 2;
+            max-width: 700px;
+            padding: 65px 50px;
+            text-align: center;
+
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(15px);
+
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 25px;
+
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
+
+            animation: appear 1.2s ease;
+        }
+
+        @keyframes appear {
+
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        }
+
+        .container h1 {
+            color: white;
+            font-size: 45px;
+            margin-bottom: 20px;
+        }
+
+        .container h1 span {
+            color: #38bdf8;
+        }
+
+        .container p {
+            color: #cbd5e1;
+            font-size: 18px;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        .tag {
+            display: inline-block;
+            color: #38bdf8;
+            background: rgba(56, 189, 248, 0.12);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            padding: 9px 18px;
+            border-radius: 25px;
+            margin-bottom: 25px;
+            font-size: 14px;
+            letter-spacing: 1px;
+        }
+
+        /* Button */
+
+        button {
+            background: linear-gradient(90deg, #38bdf8, #6366f1);
+            color: white;
+            border: none;
+            padding: 14px 35px;
+            border-radius: 30px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.4s;
+        }
+
+        button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(56, 189, 248, 0.5);
+        }
+
+        /* About Section */
+
+        .about {
+            min-height: 100vh;
+            padding: 80px 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #111827, #1e293b);
+        }
+
+        .about-content {
+            max-width: 850px;
+            text-align: center;
+        }
+
+        .about h2 {
+            font-size: 38px;
+            color: #38bdf8;
+            margin-bottom: 25px;
+        }
+
+        .about p {
+            color: #cbd5e1;
+            font-size: 18px;
+            line-height: 2;
+            margin-bottom: 40px;
+        }
+
+        /* Cloud Skills */
+
+        .skills {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .skill-card {
+            background: rgba(255, 255, 255, 0.07);
+            border: 1px solid rgba(56, 189, 248, 0.25);
+            padding: 25px;
+            width: 200px;
+            border-radius: 15px;
+            transition: 0.3s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-10px);
+            background: rgba(56, 189, 248, 0.12);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .skill-card h3 {
+            color: #38bdf8;
+            margin-bottom: 12px;
+        }
+
+        .skill-card p {
+            font-size: 14px;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+
+        footer {
+            background: #0b1120;
+            color: #94a3b8;
+            text-align: center;
+            padding: 25px;
+            font-size: 14px;
+        }
+
+        /* Responsive Design */
+
+        @media (max-width: 600px) {
+
+            .container {
+                padding: 40px 25px;
+            }
+
+            .container h1 {
+                font-size: 32px;
+            }
+
+            .container p {
+                font-size: 16px;
+            }
+
+            .about h2 {
+                font-size: 30px;
+            }
+
+            .skill-card {
+                width: 100%;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Home Section -->
+
+    <section class="home">
+
+        <div class="circle circle1"></div>
+        <div class="circle circle2"></div>
+
+        <div class="container">
+
+            <div class="tag">CLOUD COMPUTING ENTHUSIAST</div>
+
+            <h1>Hello, I'm <span>Hassan</span></h1>
+
+            <p>
+                Welcome to my webpage!
+
+                I am passionate about Cloud Computing and modern
+                technologies. I enjoy exploring cloud platforms,
+                understanding cloud infrastructure and learning
+                how to build secure and scalable solutions.
+            </p>
+
+            <button onclick="exploreMore()">
+                Explore More
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- About Section -->
+
+    <section class="about" id="about">
+
+        <div class="about-content">
+
+            <h2>My Cloud Computing Journey</h2>
+
+            <p>
+                Cloud Computing is changing the way businesses
+                store data, run applications and manage IT infrastructure.
+
+                I am currently learning Amazon Web Services (AWS)
+                and Microsoft Azure to develop my cloud computing skills.
+
+                My main interests include Cloud Infrastructure,
+                Cloud Security, Networking, DevSecOps and Cloud Deployment.
+
+                My goal is to become a Cloud Security Engineer
+                and help organizations build secure, reliable
+                and scalable cloud environments.
+            </p>
+
+            <div class="skills">
+
+                <div class="skill-card">
+                    <h3>AWS</h3>
+                    <p>Learning Amazon Web Services and its cloud infrastructure.</p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Microsoft Azure</h3>
+                    <p>Exploring Azure cloud services and deployment.</p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Cloud Security</h3>
+                    <p>Learning how to protect cloud resources and applications.</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>© 2026 Hassan | Cloud Computing Journey</p>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+
+    <script>
+
+        function exploreMore() {
+
+            document.getElementById("about").scrollIntoView({
+                behavior: "smooth"
+            });
+
+        }
+
+    </script>
+
+</body>
+
+</html>
